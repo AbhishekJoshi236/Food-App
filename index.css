@@ -5,32 +5,28 @@
     border: 1px solid black;
 }
 .logo{
-    height: 114px;
-    width: 150px;
+    height: 100px;
+    width: 130px;
 }
-
 .nav-items>ul{
     display: flex;
 }
 .nav-items>ul>li{
     padding: 10px;
     margin: 10px;
-    font-size: 30px;
+    font-size: 20px;
     list-style-type: none;
     font-weight: bold;
 }
 .res-card{
     padding: 5px;
     width: 200px;
-    /* height: 300px; */
-    margin: 5px;
+    /* height: 400px; */
+    margin-bottom: 10px;
 }
 .res-card:hover{
     border: 1px solid black;
     cursor: pointer;
-}
-.search{
-    padding: 10px;
 }
 .res-container{
     display: flex;
@@ -40,3 +36,9 @@
     width: 100%;
     min-height: 236px;
 }
+.filter-btn{
+    margin: 10px;
+    cursor: pointer;
+}
+
+

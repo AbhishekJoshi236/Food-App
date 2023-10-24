@@ -1,4 +1,4 @@
-restaurants: {
+const resList = [
     {
       "info": {
         "id": "657142",
@@ -1645,4 +1645,6 @@ restaurants: {
         "type": "DEEPLINK"
       }
     }
-}
+];
+
+export default resList;
