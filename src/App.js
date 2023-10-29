@@ -5,14 +5,11 @@ import Body from "./components/Body";
    
 const AppLayout = () => {
   return (
-    <div className="app">
-        {/* header */}
-        <Header />
-
-        {/* body */}
-        <Body />
-        {/* footer */}
-    </div>
+    <React.Fragment>
+       {/* <Header /> */}
+      <Body />
+      {/* <Footer /> */}
+    </React.Fragment>
   );
 };
 
