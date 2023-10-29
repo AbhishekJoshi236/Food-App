@@ -57,7 +57,6 @@ const Body = () => {
         <div className="res-container">
           {
             
-
             listOfRestaurant.map((restaurant) => <RestaurantCard key={restaurant.info.id} resList={restaurant}/>)
             // console.log("list of restaurant", listOfRestaurant)
 
