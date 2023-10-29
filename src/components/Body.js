@@ -32,7 +32,6 @@ const Body = () => {
     // setlistOfResturant(json.data.success.cards[1].gridWidget.gridElements.infoWithStyle.restaurants);
     
   }
-
   // if(listOfResturant.length === 0){
   //   return <Shimmer />;
   // }
