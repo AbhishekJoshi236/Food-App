@@ -19,10 +19,11 @@
     font-weight: bold;
 }
 .res-card{
-    padding: 5px;
-    width: 200px;
+    /* padding: 5px; */
+    width: 150px;
     /* height: 400px; */
-    margin-bottom: 10px;
+    margin: 10px;
+    border-radius: 10px ;
 }
 .res-card:hover{
     border: 1px solid black;
@@ -34,11 +35,32 @@
 }
 .res-logo{
     width: 100%;
-    min-height: 236px;
+    min-height: 150px;
+    max-height: 150px;
+    border-radius: 10px 10px 0px 0px;
 }
 .filter-btn{
-    margin: 10px;
+    /* margin: 10px; */
     cursor: pointer;
+}
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmer-cards{
+    margin: 20px;
+    width: 200px;
+    height: 400px;
+    background-color:#f0f0f0;
+}
+.login-btn{
+    padding: 0 20px;
+    cursor: pointer;
+}
+.filter{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
 }
 
 
