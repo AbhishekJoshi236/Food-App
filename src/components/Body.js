@@ -29,8 +29,6 @@ const Body = () => {
     }
   }
 
-  // console.log("checking: " + listOfResturant.length);
-
   if (listOfResturant === 0) {
     return <Shimmer />;
   }
