@@ -2,6 +2,10 @@ import ResturantCard from "./ResturantCard";
 import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus.js";
+
+
+
 const Body = () => {
 
   const [listOfResturant, setlistOfResturant] = useState([]);
@@ -33,6 +37,11 @@ const Body = () => {
     return <Shimmer />;
   }
 
+  const onlineStatus = useOnlineStatus();
+  if(onlineStatus === false){
+    return <h1>Internet Connection Interupted!!</h1>
+  }
+  
   return (
     <>
       <div className="body">

@@ -3,6 +3,7 @@ import Shimmer from './Shimmer';
 import { useParams } from 'react-router-dom';
 import { ITEM_URL } from '../utils/constants';
 import useRestaurantMenu from '../utils/useRestaurantMenu';
+
 const RestaurantMenu = () => {
 
   const {resId} = useParams();
