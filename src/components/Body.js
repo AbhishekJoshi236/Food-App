@@ -45,14 +45,15 @@ const Body = () => {
   return (
     <>
       <div className="body">
-        <div className="filter">
-          <div className="search">
-            <input type="text" className="search-box" value={searchText} 
+        <div className="flex">
+          <div className="search m-4 p-4 " >
+            <input type="text" className="border-black border rounded-sm" value={searchText} 
             onChange={(e)=>{
               setSearchText(e.target.value);
             }} />
             
-            <button onClick={()=>{
+            <button  className="px-4 py-0.9 m-4 bg-green-300 rounded-sm"
+              onClick={()=>{
               
               const filteredRestaurant = listOfResturant.filter(
                 (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase() )
@@ -61,24 +62,27 @@ const Body = () => {
               setFilteredRestaurant(filteredRestaurant);
 
             }}>Search</button>
-          </div>
 
-          <button 
-          className="filter-btn" 
-          onClick={() => {
-            
-            console.log("top rated clicked");
-            const filteredList = listOfResturant.filter( 
-              (res)=> res.info.avgRating >= 4.0
-            ) 
-            setFilteredRestaurant(filteredList);            
-          }}>
-            
-            Top rated Resturant
-          </button>
+          </div>
+          <div className="m-4 p-4 flex items-center">
+            <button 
+            className="px-4 py-0.9 m-4 bg-gray-300 rounded-sm" 
+            onClick={() => {
+              
+              console.log("top rated clicked");
+              const filteredList = listOfResturant.filter( 
+                (res)=> res.info.avgRating >= 4.0
+              ) 
+              setFilteredRestaurant(filteredList);            
+            }}>
+              
+              Top rated Resturant
+            </button>
+          </div>
+          
         </div>
 
-        <div className="res-container">
+        <div className="flex flex-wrap place-content-evenly">
           {  
             filteredRestaurant.map( (res) => {
               return <Link 
