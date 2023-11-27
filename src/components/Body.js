@@ -46,7 +46,7 @@ const Body = () => {
 
   return (
     <>
-      <div className="body">
+      <div className="w-9/12 m-auto">
         <div className="flex">
           <div className="search m-4 p-4 " >
             <input type="text" className="border-black border rounded-sm" value={searchText}
