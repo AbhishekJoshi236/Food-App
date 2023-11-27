@@ -84,20 +84,23 @@ const Body = () => {
 
         </div>
 
-        <div className="flex flex-wrap place-content-evenly">
-          {
-            filteredRestaurant.map((res) => {
-              return <Link
-                key={res.info.id}
-                to={"/restaurants/" + res.info.id} style={{ color: 'inherit', textDecoration: 'none' }}>
-                {
-                  res.info.aggregatedDiscountInfoV3 ? <ResturantCardPromoted resData={res} /> : <ResturantCard resData={res} />
-                }
-                
-                
-              </Link>
-            })
-          }
+        <div className="p-1 bg-gray-100 rounded-xl">
+          <h2 className="m-4 font-bold text-2xl">Restaurants With Online Food Delivery Near You</h2>
+          <div className="flex flex-wrap place-content-evenly ">
+            {
+              filteredRestaurant.map((res) => {
+                return <Link
+                  key={res.info.id}
+                  to={"/restaurants/" + res.info.id} style={{ color: 'inherit', textDecoration: 'none' }}>
+                  {
+                    res.info.aggregatedDiscountInfoV3 ? <ResturantCardPromoted resData={res} /> : <ResturantCard resData={res} />
+                  }
+
+
+                </Link>
+              })
+            }
+          </div>
         </div>
       </div>
     </>
