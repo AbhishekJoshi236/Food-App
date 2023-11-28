@@ -4,14 +4,21 @@ import { useDispatch } from "react-redux";
 import { clearCart } from "../utils/cartSlice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import emptyCart from "../utils/empty-cart.png";
 
 const Cart = () => {
 
     const cartItems = useSelector((store) => store.cart.items);
 
+    if(cartItems.length === 0){
+        return (
+            <div className="text-center">
+                <img src={emptyCart}  className="h-[350px] mt-14 mx-auto"/>
+                <h2 className="mt-4 text-4xl font-bold">Your Cart is Empty !!</h2>
+            </div>
+        );
+    }
     const dispatch = useDispatch();
-
     const handleClearCart = () => {
         dispatch(clearCart());
         toast.success("Cart Cleared!", {

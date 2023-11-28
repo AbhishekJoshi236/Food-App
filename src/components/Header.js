@@ -10,7 +10,7 @@ const Header = () =>{
     const onlineStatus = useOnlineStatus();
     
     const cartItems = useSelector((store) => store.cart.items);
-    console.log(cartItems);
+    // console.log(cartItems);
 
     return (
     <>

@@ -29,6 +29,7 @@ const Body = () => {
       setlistOfResturant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
       setFilteredRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
       setBestOffer(json?.data?.cards[0]?.card?.card?.imageGridCards?.info);
+      // console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
       // console.log(json?.data?.cards[0]?.card?.card?.imageGridCards?.info);
     } catch (error) {
       console.log("Error");
@@ -107,15 +108,13 @@ const Body = () => {
           <h2 className="m-4 font-bold text-2xl">Restaurants With Online Food Delivery Near You</h2>
           <div className="flex flex-wrap place-content-evenly ">
             {
-              filteredRestaurant.map((res) => {
+              Array.isArray(filteredRestaurant) && filteredRestaurant.map((res) => {
                 return <Link
                   key={res.info.id}
                   to={"/restaurants/" + res.info.id} style={{ color: 'inherit', textDecoration: 'none' }}>
                   {
                     res.info.aggregatedDiscountInfoV3 ? <ResturantCardPromoted resData={res} /> : <ResturantCard resData={res} />
                   }
-
-
                 </Link>
               })
             }
