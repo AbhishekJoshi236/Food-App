@@ -5,7 +5,7 @@ import { clearCart } from "../utils/cartSlice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emptyCart from "../utils/empty-cart.png";
-
+import CartList from "./CartList";
 const Cart = () => {
 
     const cartItems = useSelector((store) => store.cart.items);
@@ -18,7 +18,9 @@ const Cart = () => {
             </div>
         );
     }
+
     const dispatch = useDispatch();
+
     const handleClearCart = () => {
         dispatch(clearCart());
         toast.success("Cart Cleared!", {
@@ -33,7 +35,8 @@ const Cart = () => {
                     <button className=" p-2 m-2 mt-4 bg-red-600 text-white rounded-xl font-bold"
                     onClick={handleClearCart}>Clear Cart</button>
                 </div>
-                <ItemList items={cartItems} />
+                {/* <ItemList items={cartItems} /> */}
+                <CartList items={cartItems} />
             </div>
 
             <ToastContainer />
