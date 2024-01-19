@@ -2,8 +2,8 @@
 
 Food-cart is a web application built using HTML, CSS, JavaScript, React.js, and Tailwind CSS. It leverages live Swiggy APIs to display real-time data about restaurants near the user, categorizes dishes, and provides a seamless experience for exploring and ordering food.
 
-## LIVE
-[Click Here](https://food-app-zeta-silk.vercel.app/)
+## PREVIEW
+[Click Here](https://drive.google.com/file/d/1s98sU1PFHJQ3JoqF55eh2-cOVwN1D-ZT/view?usp=sharing)
 
 ## Features
 
